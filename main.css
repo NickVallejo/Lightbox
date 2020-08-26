@@ -1,0 +1,141 @@
+body {
+  height: 2000px;
+}
+
+.red {
+  color: #bc2f2c;
+  font-weight: bold;
+}
+
+.pop-hero {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  opacity: 0;
+  transition: 1s all;
+  background-size: cover;
+  z-index: 1000;
+}
+
+.pop-on {
+  display: block;
+}
+
+.pop-opac {
+  opacity: 1;
+}
+
+.pop-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pop-box {
+  height: 450px;
+  width: 80%;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.7);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  transition: 1s ease;
+}
+
+.pop-up {
+  bottom: 0px;
+}
+
+.pop-info {
+  align-self: center;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 35px;
+  justify-self: center;
+}
+
+.pop-info h3 {
+  font-weight: 200;
+}
+
+.pop-txt {
+  font-family: "Nunito", sans-serif;
+  line-height: 30px;
+  margin-top: 25px;
+}
+
+.pop-img {
+  flex: 1;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -100px 0px;
+}
+
+.pop-img i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .pop-info {
+    align-self: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    justify-self: center;
+  }
+
+  .pop-img {
+    background-position: 0px 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  .pop-box {
+    flex-flow: column-reverse;
+  }
+
+  .pop-info {
+    align-self: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 40px;
+    justify-self: center;
+  }
+
+  .pop-info h2 {
+    font-size: 25px;
+  }
+
+  .pop-info h3 {
+    font-size: 20px;
+  }
+
+  .pop-img {
+    background-position: 0px 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .pop-box {
+    border-radius: 10px;
+  }
+}
